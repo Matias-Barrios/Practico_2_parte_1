@@ -11,4 +11,11 @@
             e.Handled = True
         End If
     End Sub
+    Public Function revertir(input As String) As String
+        Dim resultado As String
+        For Each letra In input
+            resultado = letra & resultado
+        Next
+        Return resultado
+    End Function
 End Module

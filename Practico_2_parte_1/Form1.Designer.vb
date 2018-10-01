@@ -28,8 +28,12 @@ Partial Class ventana_principal
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txt_input = New System.Windows.Forms.TextBox()
         Me.lbl_resultado = New System.Windows.Forms.Label()
+        Me.lbl_reverso = New System.Windows.Forms.Label()
+        Me.txt_input_reverso = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.tab_Principal.SuspendLayout()
         Me.tab_Conversor_celsius.SuspendLayout()
+        Me.TabPage2.SuspendLayout()
         Me.SuspendLayout()
         '
         'tab_Principal
@@ -60,12 +64,15 @@ Partial Class ventana_principal
         '
         'TabPage2
         '
+        Me.TabPage2.Controls.Add(Me.lbl_reverso)
+        Me.TabPage2.Controls.Add(Me.txt_input_reverso)
+        Me.TabPage2.Controls.Add(Me.Label3)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage2.Size = New System.Drawing.Size(763, 553)
         Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "TabPage2"
+        Me.TabPage2.Text = "Revertir"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
         'Label1
@@ -89,6 +96,7 @@ Partial Class ventana_principal
         Me.txt_input.Name = "txt_input"
         Me.txt_input.Size = New System.Drawing.Size(453, 50)
         Me.txt_input.TabIndex = 1
+        Me.txt_input.Text = "0"
         '
         'lbl_resultado
         '
@@ -100,7 +108,43 @@ Partial Class ventana_principal
         Me.lbl_resultado.Name = "lbl_resultado"
         Me.lbl_resultado.Size = New System.Drawing.Size(550, 179)
         Me.lbl_resultado.TabIndex = 2
+        Me.lbl_resultado.Text = "32"
         Me.lbl_resultado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lbl_reverso
+        '
+        Me.lbl_reverso.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lbl_reverso.Font = New System.Drawing.Font("Modern No. 20", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_reverso.ForeColor = System.Drawing.Color.LimeGreen
+        Me.lbl_reverso.Location = New System.Drawing.Point(36, 371)
+        Me.lbl_reverso.Name = "lbl_reverso"
+        Me.lbl_reverso.Size = New System.Drawing.Size(690, 179)
+        Me.lbl_reverso.TabIndex = 5
+        Me.lbl_reverso.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'txt_input_reverso
+        '
+        Me.txt_input_reverso.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txt_input_reverso.Font = New System.Drawing.Font("Tahoma", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txt_input_reverso.Location = New System.Drawing.Point(36, 209)
+        Me.txt_input_reverso.MaxLength = 10
+        Me.txt_input_reverso.Multiline = True
+        Me.txt_input_reverso.Name = "txt_input_reverso"
+        Me.txt_input_reverso.Size = New System.Drawing.Size(690, 160)
+        Me.txt_input_reverso.TabIndex = 4
+        '
+        'Label3
+        '
+        Me.Label3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label3.Font = New System.Drawing.Font("Modern No. 20", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(106, 53)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(550, 179)
+        Me.Label3.TabIndex = 3
+        Me.Label3.Text = "Introduzca una palabra para ver el reverso de la misma"
+        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'ventana_principal
         '
@@ -113,6 +157,8 @@ Partial Class ventana_principal
         Me.tab_Principal.ResumeLayout(False)
         Me.tab_Conversor_celsius.ResumeLayout(False)
         Me.tab_Conversor_celsius.PerformLayout()
+        Me.TabPage2.ResumeLayout(False)
+        Me.TabPage2.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -123,4 +169,7 @@ Partial Class ventana_principal
     Friend WithEvents lbl_resultado As Label
     Friend WithEvents txt_input As TextBox
     Friend WithEvents Label1 As Label
+    Friend WithEvents lbl_reverso As Label
+    Friend WithEvents txt_input_reverso As TextBox
+    Friend WithEvents Label3 As Label
 End Class
